@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lange="en">
+	<head>
+		<title>Defence Against the Dark Arts - HTTPS</title>
+		<meta http-equiv="cleartype" content='on'/>
+		<meta name="referrer" content="always">
+		<meta http-equiv="Content-Language" content="en"/>
+		<meta charset="utf-8"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<meta name="superfish" content="nofish">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes,minimum-scale=1.0"/>
+		<style type="text/css">
+			.mast_head{
+				width:380px;
+				margin:0 auto 50px;
+				position:relative;
+
+			}
+			.mast_head img{
+				width:100%;
+			}
+			h1{
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="mast_head">
+			<img src="./defence.jpg"/>
+		</div>
+		<h1>
+			HTTP vs. HTTPS
+		</h1>
+		<h2>The issues</h2>
+		<ul>
+			<li>Http is unecnrypted or plain text</li>
+			<li>Someone listenting to traffic can get access to data being sent</li>
+			<li>Users will have no idea if the request is secure or not	</li>
+		</ul>
+		<h2>The fixes</h2>
+		<ul>
+			<li>Use https (when possible) for 3rd party scripts</li>	
+		</ul>
+		<h2>Final Result</h2>
+		<p>
+			<code>
+			&lt;link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine"&gt;
+			<br/>
+			&lt;link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet"	&gt;
+			</code>
+		</p>
+		<h2>Bonus</h2>
+		<p>crossorigin attribute with anonymous tells browser not to send credentials with request</p>
+		<code>
+			&lt;link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet"	&gt;			
+		</code>
+	</body>
+</html>

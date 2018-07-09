@@ -1,0 +1,16 @@
+Advanced Concepts:
+
+Big O Notation - How quickly your application will increase in time or use up resources.  Think of a car that accelerates quickly, too fast and you can speed out of control.
+https://en.wikipedia.org/wiki/Big_O_notation 
+
+Complexity - Describes the interactions between all the entities in the program.  The more complex your program is the harder it is to change it without affecting all the other parts.
+https://en.wikipedia.org/wiki/Programming_complexity
+
+
+1) FizzBuzz
+
+2) Prime Checker
+
+3) File Sorter
+
+4) Bubble Sort

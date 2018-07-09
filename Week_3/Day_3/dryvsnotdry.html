@@ -1,0 +1,63 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>Javascript DRY Performance</title>
+        	<meta name="viewport" content="width=device-width, initial-scale=1.0">		
+	</head>
+	<body>
+		<script type="text/javascript">
+			var zooAnimals=['Tiger','Bear','Owl','Giraffe','Lion','Flamingo','Osprey','Bison','Buffalo','Gorilla','Bonobo Monkey','Bat','Tiger','Bear','Owl','Giraffe','Lion','Flamingo','Osprey','Bison','Buffalo','Gorilla','Bonobo Monkey','Bat'];
+			console.log(zooAnimals);
+			console.log(zooAnimals[0]);
+			var timesToRun=1000,nonDryTotal=0,dryTotal=0;
+			do{
+				var t2 = performance.now();
+				for(var i=0,l=zooAnimals.length;i<l;i++){
+					console.log(zooAnimals[i]);
+				}
+				var t3 = performance.now();
+				var total2=t3-t2;
+				console.log("Dry: " + (total2) + " milliseconds.");
+
+				var t0 = performance.now();
+				console.log(zooAnimals[0]);
+				console.log(zooAnimals[1]);
+				console.log(zooAnimals[2]);
+				console.log(zooAnimals[3]);
+				console.log(zooAnimals[4]);
+				console.log(zooAnimals[5]);
+				console.log(zooAnimals[6]);
+				console.log(zooAnimals[7]);
+				console.log(zooAnimals[8]);
+				console.log(zooAnimals[9]);
+				console.log(zooAnimals[10]);
+				console.log(zooAnimals[11]);
+				console.log(zooAnimals[12]);
+				console.log(zooAnimals[13]);
+				console.log(zooAnimals[14]);
+				console.log(zooAnimals[15]);
+				console.log(zooAnimals[16]);
+				console.log(zooAnimals[17]);
+				console.log(zooAnimals[18]);
+				console.log(zooAnimals[19]);
+				console.log(zooAnimals[20]);
+				console.log(zooAnimals[21]);
+				console.log(zooAnimals[22]);
+				console.log(zooAnimals[23]);			
+				var t1 = performance.now();
+				var total1=t1 - t0;
+				console.log("Non Dry: " + (total1) + " milliseconds.");
+
+				if(total2 - total1<0){
+					console.log("DRY is faster by: "+(total1 - total2)+" milliseconds");
+					dryTotal+=(total1 - total2);
+				}else{
+					console.log("Non-DRY is faster by: "+(total2 - total1)+" milliseconds");
+					nonDryTotal+=(total2 - total1);
+				}
+				timesToRun--;
+			}while(timesToRun);
+			document.write("Non-DRY was overall faster by: " +(nonDryTotal - dryTotal)+ " milliseconds");
+		</script>
+	</body>
+</html>		

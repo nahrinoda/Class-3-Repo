@@ -1,0 +1,18 @@
+Hoisting
+https://developer.mozilla.org/en-US/docs/Glossary/Hoisting
+		
+Don't Repeat Yourself (DRY) - Write code in such a way that you are not writing the same code more than once.  Easier to read, understand and maintain.
+	
+Loose Coupling	- Write code in such a way that different parts of code are not heavily dependant on each other.  That is if you change one part of the code you don't then have to change many other parts.  Easier to maintain.
+
+High Cohesion - Write code in such a way that individual parts are responsible for related tasks.  Easier to understand, debug and test.
+
+Function declarations vs. Function expressions:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions
+
+Multi-dimensional Arrays:
+array[][] or an array of Arrays
+
+JSON (Javascript Object Notation) - The spec for what a Javascript Object should look like.	
+
+

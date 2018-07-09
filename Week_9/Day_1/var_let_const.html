@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <script>
+        var name = 'Uzair';
+        let age = 100;
+        const gender = "male";
+        console.log(name, age, gender);
+        
+        name = "Vincent";
+        age = 99;
+        console.log(name, age);
+        // gender = "something else"; // can't do this
+
+        // redeclare var but not let
+        var name = "Shadid";
+        // let age = 22; // can't do this
+        console.log(name);
+
+        // can't use const in for loop - why is that?
+        for (let i = 1; i <= 4; i++) {
+            let area = i * i;
+            var perimiter = i * 4;
+            console.log(i, area, perimiter);
+        }
+        console.log(perimiter); // can't access let/const variables from for-loop since they are code-block scoped
+
+
+        let fruit;
+        if (age > 20) {
+            fruit = "orange";
+        } else {
+            fruit = "apple";
+        }
+        console.log(fruit);
+
+        fruit = "apple"; // default value
+        if (age > 20) {
+            fruit = "orange";
+        }
+        console.log(fruit);
+
+        // ternary operator
+        fruit = (age > 20 ? "orange" : "apple");
+        console.log(fruit);
+
+        response = [];
+    </script>
+</body>
+
+</html>

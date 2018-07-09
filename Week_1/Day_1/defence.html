@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lange="en">
+	<head>
+		<title>Defence Against the Dark Arts - target="_blank"</title>
+		<meta http-equiv="cleartype" content='on'/>
+		<meta name="referrer" content="always">
+		<meta http-equiv="Content-Language" content="en"/>
+		<meta charset="utf-8"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<meta name="superfish" content="nofish">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes,minimum-scale=1.0"/>
+		<style type="text/css">
+			.mast_head{
+				width:380px;
+				margin:0 auto 50px;
+				position:relative;
+
+			}
+			.mast_head img{
+				width:100%;
+			}
+			h1{
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="mast_head">
+			<img src="./defence.jpg"/>
+		</div>
+		<h1>
+			The Dangers of target="_blank"
+		</h1>
+		<h2>The issues</h2>
+		<ul>
+			<li>Linked page has access to window.opener variable</li>
+			<li>Can then run malicious code</li>
+			<li>User inherently trusts pages you are opening</li>
+		</ul>
+		<h2>The fixes</h2>
+		<ul>
+			<li>add rel="noopener"</li>
+			<li>add rel="noopener noreferrer" for firefox</li>
+		</ul>
+		<h2>Final Result</h2>
+		<p>
+			<code>
+			&lt;a href="#" target="_blank" rel="noopener noreferrer"&gt;Link Here&lt;/a&gt;
+			</code>
+		</p>
+	</body>
+</html>

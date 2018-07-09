@@ -1,0 +1,35 @@
+
+div {
+	text-align: center;
+	line-height: 100px;
+}
+
+.fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: blue;
+	height: 100px;
+	width: 300px;
+}
+
+body {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.relative {
+	background: green;
+	height: 200px;
+	position: relative;
+}
+
+
+.absolute {
+	background: indianred;
+	position: absolute;
+	bottom: 0;
+	right: -20px;
+	height: 100px;
+	width: 200px;
+}

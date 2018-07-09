@@ -1,0 +1,14 @@
+Permanent vs. Temporary Storage (Persistence)
+
+Client Side Storage vs. Server Side Storage
+
+Cacheing
+  - Client side
+  - Server side
+  - Expiry Dates & Stale data???
+    - ETag, Last-Modfied, Expires
+
+Security
+  - What can you trust from the client?
+  - What can you store in client side storage?
+     - Note: Encryption - Encrypt Personal data if sending to the client

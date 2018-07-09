@@ -1,0 +1,68 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>Javascript Nuts & Bolts</title>
+        	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<script type="text/javascript">
+			//HOISTING!!!
+			console.log(a);
+			console.log(singleHit);
+			calcOutcome(0.25);
+			console.log(singleHit);
+			{
+				var a=3;
+				var b=2;
+				console.log(a*b);
+			};
+			console.log(a);
+			//List Variables
+			var singleHit=false,doubleHit=false,tripleHit=false,homeRun=false,isOut=false,hitterAvgs=[0.421,0.317,0.316,0.316,0.300,0.280]; 
+			//Assignent with Decleration
+			// var singleHit=doubleHit=tripleHit=homeRun=isOut=false; 
+			//Normal Vraible
+			// var singleHit=false;
+			// var doubleHit=false;
+			// var tripleHit=false;
+			// var homeRun=false;
+			// var isOut=false;
+			// var hitterAvgs=[0.421,0.317,0.316,0.316,0.300,0.280];
+			
+			function calcOutcome(avg){
+				var calc=Math.random();
+				var theRest=1-calc;
+				singleHit=false;
+				doubleHit=false;
+				tripleHit=false;
+				homeRun=false;
+				isOut=false;
+				//If one statment can omit the brackets (assume code block)
+				//Same with while, for, etc...
+				if(calc>=avg){
+					isOut=true;
+				}else if(theRest>=0.85){
+					singleHit=true;
+				}else if(theRest >= 0.75){
+					doubleHit=true;
+				}else if(theRest>=0.65){
+					tripleHit=true;
+				}else if(theRest>=0.55){
+					homeRun=true;
+				}
+			}
+			for(var i=0,l=hitterAvgs.length;i<l;i++){
+				calcOutcome(hitterAvgs[i]);
+				//One instruction after if implies code block
+				if(isOut){
+					alert("You're out!")
+					console.log('A')
+				}
+				else if(singleHit)alert("Safe at first");
+				else if(doubleHit)alert("Rounds to second");
+				else if(tripleHit)alert("Slides safely into third");
+				else if(homeRun)alert("And it's outta here!");
+			}
+		</script>
+	</body>
+</html>

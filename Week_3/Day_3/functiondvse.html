@@ -1,0 +1,62 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>Function Decleration vs. Expression</title>
+        	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<script type="text/javascript">
+            var game=["p","s","r"];
+            console.log(document);
+           document.onkeyup =function(event) {
+                   var p1=event.key;
+                    var guess=game[Math.floor(Math.random()*game.length)];
+                    console.log(guess);
+                    alert(guess);
+                    if(guess==="r" && p1==="s")
+                    {
+                        alert('You lose');
+                    }
+                    else if(guess==="p" && p1==="r")
+                    {
+                        alert('You lose');   
+                    }
+                    else if(guess==='s' && p1==='p'){
+                        alert('You lose');
+                    }
+                    else if(guess===p1){
+                        alert("tie");
+                    }
+                    else{
+                        alert("you win");
+                    }
+            };	
+            //  funFunc;
+            console.log(this);
+            var obj={'a':5,b:32};
+            var a=function(vari){
+            	console.log(vari);
+            	console.log(this);
+            };
+            function b(){
+            	console.log('B');
+            }
+            //console.log(b);
+		var setTimeout=90;
+		console.log(window.setTimeout);
+            var b=5;
+            if(typeof setTimeout==='function'){
+            	console.log('IN HERE');
+					setTimeout(function(){
+			a.call(obj,5);
+		}, 1000);  
+		}	          	
+
+
+		
+		//console.log(b);
+            //TODO::Create the keydown function that doe exactly the same thing while staying DRY
+            //HINT::Use a function Expressionion
+		</script>
+	</body>
+</html>	

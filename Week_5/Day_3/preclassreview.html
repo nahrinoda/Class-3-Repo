@@ -1,0 +1,53 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>Advanced Javascript</title>
+	</head>
+	<body>
+		<button id="button">CLICK ME!</button>
+		<script type="text/javascript">
+			//Object that we will use throughout
+			var my={};
+			/*Self executing anonymous function
+			Why?
+			Function locks the scope level
+			Self executing means it runs when the page loads with everythin in it
+			*/
+			(function(){
+				//Check if this exists and if it does then stop here
+				if(my.query){return;}
+				//Define the query object here as a function
+				//Pass in the selector to use to find the element
+				my.query=function(selector){
+					//instanceof is like typeof but for objects
+					if(!(this instanceof my.query)){
+						//new keyword turns a function into an object
+						return new my.query(selector);
+					}
+					//Find an element using the querySelecto
+					this.element=document.querySelector(selector);
+					//Add an event listener tp our object
+					//evnt is the 'string' name of the evnt to listen to
+					//callback is the functino that will be called when event is fired
+					this.on=function(evnt,callback){
+						console.log(arguments);
+						this.element.addEventListener(arguments[0],function(ev){
+							//Call the callback function and sert the scope!!
+							callback.call(ev.target,ev);
+						});
+						return this;
+					}
+
+					return this;
+
+				}
+			})();
+			var q=my.query('#button');
+			q.on('click',function(){
+				console.log(this);
+				//arguments keyword is an object that contains all the arguments passed to the function
+				console.log(arguments);
+			});
+		</script>
+	</body>
+</html>

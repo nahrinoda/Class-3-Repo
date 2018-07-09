@@ -1,0 +1,45 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>Week 3 Day 2 - Recap</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//Confirm if the user needs a snow shovel
+			var doYouNeedAShovel=confirm("Do you need a snow shovel?");
+			console.log(doYouNeedAShovel);
+
+			//If they don't need a shovel then alert "Enjoy the Nice Weather"
+			//Try the conditional in short hand (negation)
+			//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators
+			//!doYouNeedAShovel same as doYouNeedAShovel==false
+			//doYouNeedAShovel same as doYouNeedAShovel==true same as doYouNeedAShovel
+			if(doYouNeedAShovel===false){
+				alert("Enjoy the Nice Weather");
+			}else{
+
+				//If they do need a snow shovel prompt them what size "0 - Small 1 - Medium 2 - Large"
+					//Note to console.log their selection for debugging
+				var typeShovel=prompt("0 - Small 1 - Medium 2 - Large");
+				console.log(typeShovel);
+				//Create an array containing the price of the shovels
+				//Small [0] 5.99
+				//Medium [1] 7.99
+				//Large [2] 10.99
+					//Note to console.log their selection for debugging
+				var prices=[5.99,7.99,10.99];
+				var index=parseInt(typeShovel);
+				var price=prices[index];
+				console.log(price);
+				//Match their selection with the price from array and calculate the total with tax (var * 1.13)
+					//Note to console.log the total for debugging
+				var total=price*1.13;
+				console.log(total);
+
+				//Write to the document a receipt for their shovel
+				//e.g. TOTAL: var
+				document.write('Your Total is: '+total);
+			}
+		</script>
+	</body>
+</html>

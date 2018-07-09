@@ -1,0 +1,64 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>Week 3 Day 2 - Loops</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//For Loop -- Loop through this array adding all the values, console.log the total
+			//BONUS: Optimize the loop to make it faster
+			var purchases=[5,10,15,20,25,30,40,50,60];
+			var total=0;
+			//for(var i=0;i<purchases.length;i++)
+			for(var i=0,l=purchases.length;i<l;i++){
+				total=total+purchases[i];
+			}
+
+			//While Loop -- Run this loop until the budget reaches or goes below zero console.log the budget at each step
+			//Also console.log the iterator after the loop to see where you stopped
+			//while(conditional){ }
+			var budget=55;
+			i=0;
+			while(budget>=0){
+				budget-=purchases[i];
+				i+=1;	
+			}
+			//Do While Loop -- Same as while but with a do
+			//do { }while(conditional)
+			//Difference between do while and while
+			//When would I use them? (optimization question)
+			budget=55;
+			i=0;
+			do{
+				budget-=purchases[i];
+				i+=1;
+			}while(budget>=0);
+			console.log(budget);
+			//Conditionals that aren't boolean WUT??
+			//Truthy Falsy
+			//Build an age prompt that keeps prompting until it gets a valid response
+			do{
+				var myAge=prompt('What is your age?');
+				console.log(myAge);
+				if(myAge){
+					myAge=parseInt(myAge);
+				}
+				console.log(myAge);
+			}while(!myAge);
+			console.log(myAge);
+			//What type of loop would you use and why?
+			//How would you write the conditional?
+			//What would fail the conditional and what would pass (Truthy vs. Falsy)?
+			/****************
+			Falsy ->
+			null
+			undefined
+			NaN
+			0
+			Empty String
+			Empty Array (actually returns an empty string)
+			Truthy -> Everything else
+			****************/
+		</script>
+	</body>
+</html>

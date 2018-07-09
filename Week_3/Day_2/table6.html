@@ -1,0 +1,35 @@
+    <!DOCTYPE>
+    <html>
+        <head>
+            <title>Week 3 Day 2 - Loops</title>
+        </head>
+        <body>
+            <script type="text/javascript">
+            var game=["p","s","r"];
+            document.onkeyup = function(event) {
+                   var p1=event.key;
+                    var guess=game[Math.floor(Math.random()*game.length)];
+                    console.log(guess);
+                    alert(guess);
+                    if(guess==="r" && p1==="s")
+                    {
+                        alert('You lose');
+                    }
+                    else if(guess==="p" && p1==="r")
+                    {
+                        alert('You lose');   
+                    }
+                    else if(guess==='s' && p1==='p'){
+                        alert('You lose');
+                    }
+                    else if(guess===p1){
+                        alert("tie");
+                    }
+                    else{
+                        alert("you win");
+                    }
+            }
+            
+            </script>
+        </body>
+    </html>
